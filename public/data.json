@@ -1,0 +1,27 @@
+[
+    {
+        "id": 50,
+        "pulmon": 50,
+        "pasillo": [1,2]
+    },
+    {
+        "id": 51,
+        "pulmon": 51,
+        "pasillo": [3,5]
+    },
+    {
+        "id": 52,
+        "pulmon": 52,
+        "pasillo": [4,6,8]
+    },
+    {
+        "id": 53,
+        "pulmon": 53,
+        "pasillo": [7,9]
+    },
+    {
+        "id": 54,
+        "pulmon": 54,
+        "pasillo": [11,12,10]
+    }
+]

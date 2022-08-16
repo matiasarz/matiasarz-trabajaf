@@ -1,0 +1,22 @@
+.avatarCard {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.avatarCard img {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+}
+.avatarCard h1 {
+    position: relative;
+    z-index: 100;
+}

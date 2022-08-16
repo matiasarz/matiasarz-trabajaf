@@ -1,0 +1,18 @@
+.repoContainer {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.repoContainer .buttonBack {
+    background-color: #0707a0;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: #fff;
+}
+.repoContainer .buttonBack:hover {
+    background-color: #ec8209;
+}
