@@ -1,25 +1,15 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useFetch } from '../../hooks/useFetch.js';
 import Avatar from "../avatar/Avatar";
 import './AvatarContainer.css';
 
-const getDataJson = () => fetch('http://localhost:3000/avatar.json');
-
 const AvatarContainer = () => {
 
-    const [ dataJson, setDataJson ] = useState([]);
-
-    useEffect(() => {
-        getDataJson()
-            .then(response => response.json())
-            .then(data => setDataJson(data))
-            .catch(e => console.log(`Error: ${e}`))
-    }, [])
+    const { data } = useFetch('http://localhost:3000/avatar.json');
 
     return (
         <div className="avatarContainer">
             {
-                dataJson.map(data => <Avatar data={data} key={data.id} />)
+                data.map(item => <Avatar data={item} key={item.id} />)
             }
         </div>
     )
