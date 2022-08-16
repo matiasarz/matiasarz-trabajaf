@@ -6,7 +6,7 @@
     justify-content: space-around;
     margin-top: 20px;
 }
-.repoContainer .buttonBack {
+/* .repoContainer .buttonBack {
     background-color: #0707a0;
     width: fit-content;
     padding: 8px 16px;
@@ -15,4 +15,4 @@
 }
 .repoContainer .buttonBack:hover {
     background-color: #ec8209;
-}
+} */

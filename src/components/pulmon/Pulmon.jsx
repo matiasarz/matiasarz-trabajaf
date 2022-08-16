@@ -1,20 +1,18 @@
-import useFetch from "../../hooks/useFetch";
+import { Link } from 'react-router-dom';
 import './Pulmon.css';
 
-const Pulmon = () => {
+const Pulmon = ({ data, setSendPulmon }) => {
 
-    const { data, loading } = useFetch('http://localhost:3000/data.json');
+    const { pulmon } = data;
 
-    if(loading) {
-        return <h2>Cargando...</h2>
-    }
+    const handleClick = () => setSendPulmon(pulmon);
 
     return (
-        <div className="pulmonContainer">
-            {
-                data.map(item => <div className="uniquePulmon" key={item.id}><h2>{item.pulmon}</h2></div>)
-            }
-        </div>
+        <Link to={`${pulmon}`} >
+            <div className="uniquePulmon" onClick={handleClick}>
+                <h2>{pulmon}</h2>
+            </div>
+        </Link>
     )
 }
 
