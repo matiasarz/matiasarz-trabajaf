@@ -8,7 +8,7 @@ const Pulmon = ({ data, setSendPulmon }) => {
     const handleClick = () => setSendPulmon(pulmon);
 
     return (
-        <Link to={`${pulmon}`} >
+        <Link to={`/repositor/${pulmon}`} >
             <div className="uniquePulmon" onClick={handleClick}>
                 <h2>{pulmon}</h2>
             </div>
