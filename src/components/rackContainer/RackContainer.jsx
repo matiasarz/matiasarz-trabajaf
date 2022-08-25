@@ -1,16 +1,15 @@
-import React, { useContext } from 'react';
-import { dataContextProvider } from '../../context/DataProvider';
-
+import { useParams } from "react-router-dom"
 
 const RackContainer = () => {
 
-    const { data } = useContext(dataContextProvider);
+    const { pedo } = useParams();
 
-    
+    console.log(pedo);
+
 
     return (
         <div>
-        
+            <h1>Rack</h1>
         </div>
     )
 }

@@ -1,22 +1,36 @@
-import { useFetch } from '../../hooks/useFetch';
-import  Pasillos from '../pasillo/Pasillos';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from "react-router-dom";
+import { getData } from "../pulmonContainer/PulmonContainer";
+import { useState, useEffect } from "react";
+import './PasilloContainer.css';
 
 const PasilloContainer = () => {
 
-    const { data, loading } = useFetch('http://localhost:3000/data.json');
+    const [ data, setData ] = useState([])
 
     const { id } = useParams();
 
-    let selected = data.find(item => item.pulmon == id) || [];
+    useEffect(() => {
+        getData()
+            .then(res => res.json())
+            .then(data => setData(data.filter(item => item.id == id)))
+    }, [])
 
-    if(loading) {
-        return <h2>Cargando...</h2>
+    const [ objeto ] = data;
+    if (!objeto) {
+        return <h2>Cargando</h2>
     }
+    const { pasillo } = objeto;
+
+    console.log(objeto)
 
     return (
         <div>
-            <Pasillos data={selected} />
+            <h1>PasilloContainer</h1>
+            <div className="pasilloContainer">
+                {
+                    pasillo.map((item,index) => <Link to={`/pasillo/${item}`} key={index} ><h2>{item}</h2></Link>)
+                }
+            </div>
         </div>
     )
 }

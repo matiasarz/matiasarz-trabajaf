@@ -2,11 +2,6 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    box-sizing: border-box;
     font-family: sans-serif;
-}
-.appContainer {
-    width: 90%;
-    height: 100vh;
-    margin: auto;
+    box-sizing: border-box;
 }

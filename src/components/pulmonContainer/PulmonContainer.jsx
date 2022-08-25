@@ -1,19 +1,29 @@
-import { useFetch } from '../../hooks/useFetch';
-import Pulmon from '../pulmon/Pulmon';
+import { useEffect, useState } from "react";
+import PulmonItem from "../pulmonItem/PulmonItem";
+import './PulmonContainer.css';
 
-const PulmonContainer = ({setSendPulmon}) => {
+export const getData = () => {
+    return fetch('http://localhost:3000/data.json');
+}
 
-    const { data, loading } = useFetch('http://localhost:3000/data.json');
+const PulmonContainer = () => {
 
-    if(loading) {
-        return <h2>Cargando...</h2>
-    }
+    const [ data, setData ] = useState([])
+
+    useEffect(() => {
+        getData()
+            .then(res => res.json())
+            .then(data => setData(data))
+    }, [])
 
     return (
-        <div className="pulmonContainer">
-            {
-                data.map(item => <Pulmon key={item.id} data={item} setSendPulmon={setSendPulmon} />)
-            }
+        <div>
+            <h1>Pulmon</h1>
+            <div className="pulmonItemContainer">
+                {
+                    data.map(item => <PulmonItem key={item.id} data={item} />)
+                }
+            </div>
         </div>
     )
 }

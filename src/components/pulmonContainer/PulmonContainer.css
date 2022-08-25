@@ -1,6 +1,5 @@
-.avatarContainer {
-    flex-grow: .5;
-    width: 100%;
+.pulmonItemContainer {
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
 }

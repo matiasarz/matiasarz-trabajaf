@@ -1,34 +1,22 @@
-import { useState } from 'react';
 import './App.css';
-import DataProvider from './context/DataProvider'
+import PulmonContainer from './components/pulmonContainer/PulmonContainer';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Repositor from './routes/Repositor';
-import Inicio from './routes/Inicio';
-import RepositorPasillo from './routes/RepositorPasillo';
-import Rack from './routes/Rack';
+import PasilloContainer from './components/pasilloContainer/PasilloContainer';
+import RackContainer from './components/rackContainer/RackContainer';
 
 const App = () => {
-
-    const [ sendPulmon, setSendPulmon ] = useState('');
-
     return (
-        <>
-            <BrowserRouter>
-                <div className="appContainer">
-                    <DataProvider>
-                        <Routes>
-                            <Route path='/' element={<Inicio mensaje='Mensaje de bienvenida' />} />
-                            <Route path='/repositor' element={
-                                <Repositor title='Pulmones' setSendPulmon={setSendPulmon} />} 
-                            />
-                            <Route path={`/repositor/:id`} element={<RepositorPasillo />} />
-                            <Route path='/repositor/:id/rack' element={<Rack />} />
-                        </Routes>
-                    </DataProvider>
-                </div>
+        <div>
+            <BrowserRouter> 
+                <h1>App</h1>
+                <Routes>
+                    <Route path='/' element={<PulmonContainer />} />
+                    <Route path='/:id' element={<PasilloContainer />} />
+                    <Route path='/pasillo/:pedo' element={<RackContainer />} />
+                </Routes>
             </BrowserRouter>
-        </>
+        </div>
     )
 }
 

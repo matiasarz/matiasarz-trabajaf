@@ -3,10 +3,20 @@
         "id": 50,
         "pulmon": 50,
         "pasillo": [1,2],
-        "rack": {
-            "pasilloUno": [1,2,3,4,5,6,7], 
-            "pasilloDos": [1,2,3,4,5,6] 
-        }
+        "rack": [
+            {
+                "pasillo": 1,
+                "posiciones": [
+
+                ]
+            },
+            {
+                "pasillo": 2,
+                "posiciones": [
+                    
+                ]
+            }
+        ]
     },
     {
         "id": 51,
