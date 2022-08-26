@@ -6,15 +6,11 @@
         "rack": [
             {
                 "pasillo": 1,
-                "posiciones": [
-
-                ]
+                "racks": [1,2,3,4,5,6,7]
             },
             {
                 "pasillo": 2,
-                "posiciones": [
-                    
-                ]
+                "racks": [1,2,3,4,5,6]
             }
         ]
     },
@@ -22,24 +18,68 @@
         "id": 51,
         "pulmon": 51,
         "pasillo": [3,5],
-        "rack": []
+        "rack": [
+            {
+                "pasillo": 3,
+                "racks": [1,2,3,4,5,6,7,8,9,10]
+            },
+            {
+                "pasillo": 5,
+                "racks": [1,2,3,4,5,6,7,8,9,10]
+            }
+        ]
     },
     {
         "id": 52,
         "pulmon": 52,
         "pasillo": [4,6,8],
-        "rack": []
+        "rack": [
+            {
+                "pasillo": 4,
+                "racks": [1,2,3,4,5,6,7]
+            },
+            {
+                "pasillo": 6,
+                "racks": [1,2,3,4,5,6,7]
+            },
+            {
+                "pasillo": 8,
+                "racks": [1,2,3,4,5,6,7]
+            }
+        ]
     },
     {
         "id": 53,
         "pulmon": 53,
         "pasillo": [7,9],
-        "rack": []
+        "rack": [
+            {
+                "pasillo": 7,
+                "racks": [1,2,3,4,5,6,7,8]
+            },
+            {
+                "pasillo": 9,
+                "racks": [1,2,3,4,5,6,7,8]
+            }
+        ]
     },
     {
         "id": 54,
         "pulmon": 54,
         "pasillo": [11,12,10],
-        "rack": []
+        "rack": [
+            {
+                "pasillo": 10,
+                "racks": [1,2,3,4,5]
+            },
+            {
+                "pasillo": 11,
+                "racks": [1,2,3,4,5,6,7,8,9]
+            },
+            {
+                "pasillo": 12,
+                "racks": [1,2,3,4,5,6,7,8]
+            }
+        ]
     }
 ]

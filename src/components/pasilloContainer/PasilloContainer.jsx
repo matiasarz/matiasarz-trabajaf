@@ -21,8 +21,6 @@ const PasilloContainer = () => {
     }
     const { pasillo } = objeto;
 
-    console.log(objeto)
-
     return (
         <div>
             <h1>PasilloContainer</h1>

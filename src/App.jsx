@@ -13,7 +13,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<PulmonContainer />} />
                     <Route path='/:id' element={<PasilloContainer />} />
-                    <Route path='/pasillo/:pedo' element={<RackContainer />} />
+                    <Route path='/pasillo/:id' element={<RackContainer />} />
                 </Routes>
             </BrowserRouter>
         </div>
