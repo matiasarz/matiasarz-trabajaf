@@ -1,14 +1,13 @@
 
 .bienvenidoContainer {
     text-align: center;
+    padding-top: 30px;
 }
 .bienvenidoContainer h1 {
-    margin: 30px auto;
     padding: 10px;
 }
-
 .avatarContainer {
-    height: calc(100vh - 117px);
+    padding-top: 80px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -24,4 +23,13 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+.avatar .avatarInfo {
+    position: absolute; 
+}
+.avatar img {
+    padding: 5px;
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
 }

@@ -1,8 +1,16 @@
 .pulmonItem {
+    background-color: #020263;
     border: 1px solid #999;
     box-shadow: 0 0 5px #999;
     border-radius: 5px;
-    padding: 10px;
     flex-grow: 1;
     text-align: center;
+}
+.pulmonItem:hover {
+    background-color: #f39200;
+}
+.pulmonItem .pulmonItemLink {
+    color: #fff;
+    display: block;
+    padding: 20px;
 }

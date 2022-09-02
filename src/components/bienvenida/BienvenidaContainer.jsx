@@ -13,14 +13,14 @@ const BienvenidaContainer = ({ title }) => {
     }, []);
 
     return (
-        <div className="bienvenidoContainer">
+        <section className="bienvenidoContainer">
             <h1>{title}</h1>
             <div className="avatarContainer">
                 {avatar.map((avatar) => (
                     <Avatar key={avatar.id} data={avatar} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

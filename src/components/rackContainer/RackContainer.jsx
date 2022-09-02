@@ -33,11 +33,11 @@ const RackContainer = () => {
     return (
         <>
             <ButtonBack to={`/reposicion/pasillo/${route}`} />
-            <ul>
+            <div className="rackNumberContainer">
                 {data.map((item) => (
                     <RackItem key={item} rack={item} />
                 ))}
-            </ul>
+            </div>
         </>
     );
 };

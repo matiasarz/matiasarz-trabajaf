@@ -15,15 +15,15 @@ const PulmonContainer = () => {
     }, []);
 
     return (
-        <div>
+        <section className="pulmonContainer">
             <ButtonBack to="/" />
-            <h1>Pulmon</h1>
+            <h1>Pulmones</h1>
             <div className="pulmonItemContainer">
                 {data.map((item) => (
                     <PulmonItem key={item.id} data={item} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

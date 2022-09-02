@@ -22,12 +22,13 @@ const PasilloContainer = () => {
     const { pasillo } = objeto;
 
     return (
-        <div>
+        <section className="pasilloContainer">
             <ButtonBack to="/reposicion" />
             <h1>PasilloContainer</h1>
             <div className="pasilloContainer">
                 {pasillo.map((item, index) => (
                     <Link
+                        className="pasilloLink"
                         to={`/reposicion/pasillo/${objeto.pulmon}/${item}`}
                         key={index}
                     >
@@ -35,7 +36,7 @@ const PasilloContainer = () => {
                     </Link>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
