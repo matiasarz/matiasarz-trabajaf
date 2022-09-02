@@ -9,7 +9,7 @@ const RackContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        getData()
+        getData("http://localhost:3000/data.json")
             .then((res) => res.json())
             .then((data) => {
                 let filtro = data.reduce((acc, item) => {

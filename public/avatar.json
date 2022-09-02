@@ -2,11 +2,13 @@
     {
         "nombre": "Repositor",
         "saludo": "hola",
-        "id": 1
+        "id": 1,
+        "sector": "reposicion"
     },
     {
         "nombre": "SDA",
         "saludo": "hola",
-        "id": 2
+        "id": 2,
+        "sector": "sda"
     }
 ]

@@ -1,31 +1,28 @@
 import { useEffect, useState } from "react";
 import PulmonItem from "../pulmonItem/PulmonItem";
-import './PulmonContainer.css';
+import "./PulmonContainer.css";
 
-export const getData = () => {
-    return fetch('http://localhost:3000/data.json');
-}
+export const getData = (url) => fetch(url);
 
 const PulmonContainer = () => {
-
-    const [ data, setData ] = useState([])
+    const [data, setData] = useState([]);
 
     useEffect(() => {
-        getData()
-            .then(res => res.json())
-            .then(data => setData(data))
-    }, [])
+        getData("http://localhost:3000/data.json")
+            .then((res) => res.json())
+            .then((data) => setData(data));
+    }, []);
 
     return (
         <div>
             <h1>Pulmon</h1>
             <div className="pulmonItemContainer">
-                {
-                    data.map(item => <PulmonItem key={item.id} data={item} />)
-                }
+                {data.map((item) => (
+                    <PulmonItem key={item.id} data={item} />
+                ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default PulmonContainer
+export default PulmonContainer;

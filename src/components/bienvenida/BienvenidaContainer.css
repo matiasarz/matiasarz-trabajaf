@@ -1,0 +1,27 @@
+
+.bienvenidoContainer {
+    text-align: center;
+}
+.bienvenidoContainer h1 {
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.avatarContainer {
+    height: calc(100vh - 117px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    border: 1px solid #22c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
