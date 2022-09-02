@@ -1,35 +1,33 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { getData } from "../pulmonContainer/PulmonContainer";
 import RackItem from "../rackItem/RackItem";
 
 const RackContainer = () => {
-
-    const [ data, setData ] = useState([])
+    const [data, setData] = useState([]);
 
     const { id } = useParams();
 
     useEffect(() => {
         getData()
-            .then(res => res.json())
-            .then(data => {
-                let h = data.map(item => item.rack);
-                h.forEach(item => {
-                    let a = item.find(item => item.pasillo == id);
-                    if (a) {
-                        setData(a)
-                    }
-                })
-            })
-    }, [])
-
-    console.log(id);
+            .then((res) => res.json())
+            .then((data) => {
+                let filtro = data.reduce((acc, item) => {
+                    acc.push(item.rack);
+                    return acc.flat().filter((item) => item.pasillo == id);
+                }, []);
+                let rack = filtro.map((item) => item.racks);
+                setData(rack.flat());
+            });
+    }, [id]);
 
     return (
-        <div>
-            <RackItem data={data} />
-        </div>
-    )
-}
+        <ul>
+            {data.map((item) => (
+                <RackItem key={item} rack={item} />
+            ))}
+        </ul>
+    );
+};
 
-export default RackContainer
+export default RackContainer;
