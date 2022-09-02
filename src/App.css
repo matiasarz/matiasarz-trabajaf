@@ -5,3 +5,7 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+.mainContainer {
+    width: 90%;
+    margin: auto;
+}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ButtonBack from "../buttonBack/ButtonBack";
 import PulmonItem from "../pulmonItem/PulmonItem";
 import "./PulmonContainer.css";
 
@@ -15,6 +16,7 @@ const PulmonContainer = () => {
 
     return (
         <div>
+            <ButtonBack to="/" />
             <h1>Pulmon</h1>
             <div className="pulmonItemContainer">
                 {data.map((item) => (
