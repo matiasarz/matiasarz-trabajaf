@@ -20,15 +20,17 @@ const RackContainer = () => {
 
                 let filtro = data.reduce((acc, item) => {
                     acc.push(item.rack);
-                    return acc.flat().filter((item) => item.pasillo == id);
+                    return acc
+                        .flat()
+                        .filter((item) => item.pasillo === parseInt(id));
                 }, []);
 
-                let rack = filtro.map((item) => item.racks);
-
-                setData(rack.flat());
+                setData(filtro.map((item) => item.racks).flat());
                 setRoute(idRoute.pulmon);
             });
     }, [id]);
+
+    if (!data) return <h2>Cargando...</h2>;
 
     return (
         <>

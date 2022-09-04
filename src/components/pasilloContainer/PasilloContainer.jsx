@@ -12,24 +12,23 @@ const PasilloContainer = () => {
     useEffect(() => {
         getData("http://localhost:3000/data.json")
             .then((res) => res.json())
-            .then((data) => setData(data.filter((item) => item.id == id)));
-    }, []);
+            .then((data) =>
+                setData(data.find((item) => item.id === parseInt(id)))
+            );
+    }, [id]);
 
-    const [objeto] = data;
-    if (!objeto) {
-        return <h2>Cargando</h2>;
-    }
-    const { pasillo } = objeto;
+    const { pasillo } = data;
+    if (!pasillo) return <h2>Cargando</h2>;
 
     return (
         <section className="pasilloContainer">
             <ButtonBack to="/reposicion" />
-            <h1>PasilloContainer</h1>
+            <h1>Pasillo</h1>
             <div className="pasilloContainer">
                 {pasillo.map((item, index) => (
                     <Link
                         className="pasilloLink"
-                        to={`/reposicion/pasillo/${objeto.pulmon}/${item}`}
+                        to={`/reposicion/pasillo/${data.pulmon}/${item}`}
                         key={index}
                     >
                         <h2>{item}</h2>
