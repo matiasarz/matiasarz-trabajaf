@@ -33,14 +33,21 @@ const RackContainer = () => {
     if (!data) return <h2>Cargando...</h2>;
 
     return (
-        <>
+        <section className="rackContainer">
             <ButtonBack to={`/reposicion/pasillo/${route}`} />
+            <h1>Racks</h1>
+            <p>
+                <b>
+                    Las cubetas se deberan reponer lo más proximas posible a la
+                    posicion del 28 del SDA "Sistema de automatización".
+                </b>
+            </p>
             <div className="rackNumberContainer">
                 {data.map((item) => (
                     <RackItem key={item} rack={item} />
                 ))}
             </div>
-        </>
+        </section>
     );
 };
 

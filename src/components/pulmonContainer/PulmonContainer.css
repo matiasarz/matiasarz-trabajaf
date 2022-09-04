@@ -1,10 +1,11 @@
-.pulmonContainer h1 {
+.pulmonContainer h1,p {
     padding: 10px;
     margin-top: 30px;
 }
 .pulmonItemContainer {
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;

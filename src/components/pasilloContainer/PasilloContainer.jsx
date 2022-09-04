@@ -24,6 +24,12 @@ const PasilloContainer = () => {
         <section className="pasilloContainer">
             <ButtonBack to="/reposicion" />
             <h1>Pasillo</h1>
+            <p>
+                <b>
+                    Una vez realizado el paso anterior llevamos las cubetas al
+                    pasillo correspondiente.
+                </b>
+            </p>
             <div className="pasilloContainer">
                 {pasillo.map((item, index) => (
                     <Link
