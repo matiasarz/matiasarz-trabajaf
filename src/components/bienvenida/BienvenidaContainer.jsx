@@ -7,7 +7,7 @@ const BienvenidaContainer = ({ title }) => {
     const [avatar, setAvatar] = useState([]);
 
     useEffect(() => {
-        getData("http://localhost:3000/avatar.json")
+        getData(`http://${window.location.host}/avatar.json`)
             .then((res) => res.json())
             .then((data) => setAvatar(data));
     }, []);
