@@ -1,0 +1,14 @@
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .imgEmployee {
+        visibility: visible;
+    }
+    .avatar .avatarInfo {
+        visibility: hidden;
+        position: absolute;
+    }
+}

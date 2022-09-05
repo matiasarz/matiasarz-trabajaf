@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Avatar.css";
 
 const Avatar = ({ data }) => {
     const { nombre, saludo, sector, imgUrl } = data;
@@ -23,17 +24,14 @@ const Avatar = ({ data }) => {
             onMouseLeave={turnOffElement}
         >
             <div className="avatar">
-                <div
-                    className="avatarInfo"
-                    style={hide ? styleHide : styleShow}
-                >
+                <div className={hide ? "" : "avatarInfo"}>
                     <h2>{nombre}</h2>
                     <h4>{saludo}</h4>
                 </div>
                 <img
                     src={imgUrl}
                     alt={nombre}
-                    style={hide ? styleShow : styleHide}
+                    className={hide ? "imgEmployee" : ""}
                 />
             </div>
         </Link>
