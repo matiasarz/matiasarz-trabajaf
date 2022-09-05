@@ -10,7 +10,7 @@ const PasilloContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        getData("http://localhost:3000/data.json")
+        getData(`https://${window.location.host}/data.json`)
             .then((res) => res.json())
             .then((data) =>
                 setData(data.find((item) => item.id === parseInt(id)))
