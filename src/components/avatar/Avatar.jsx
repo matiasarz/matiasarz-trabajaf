@@ -10,12 +10,12 @@ const Avatar = ({ data }) => {
     const turnOnElement = () => setHide(true);
     const turnOffElement = () => setHide(false);
 
-    const styleShow = {
-        visibility: "visible",
-    };
-    const styleHide = {
-        visibility: "hidden",
-    };
+    // const styleShow = {
+    //     visibility: "visible",
+    // };
+    // const styleHide = {
+    //     visibility: "hidden",
+    // };
 
     return (
         <Link

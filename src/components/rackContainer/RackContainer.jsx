@@ -10,8 +10,10 @@ const RackContainer = () => {
 
     const { id } = useParams();
 
+    const { protocol, host } = window.location;
+
     useEffect(() => {
-        getData(`https://${window.location.host}/data.json`)
+        getData(`${protocol}//${host}/data.json`)
             .then((res) => res.json())
             .then((data) => {
                 let idRoute = data.find((item) =>
@@ -28,7 +30,7 @@ const RackContainer = () => {
                 setData(filtro.map((item) => item.racks).flat());
                 setRoute(idRoute.pulmon);
             });
-    }, [id]);
+    }, [host, id, protocol]);
 
     if (!data) return <h2>Cargando...</h2>;
 

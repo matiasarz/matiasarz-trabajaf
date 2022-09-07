@@ -9,13 +9,15 @@ const PasilloContainer = () => {
 
     const { id } = useParams();
 
+    const { protocol, host } = window.location;
+
     useEffect(() => {
-        getData(`https://${window.location.host}/data.json`)
+        getData(`${protocol}//${host}/data.json`)
             .then((res) => res.json())
             .then((data) =>
                 setData(data.find((item) => item.id === parseInt(id)))
             );
-    }, [id]);
+    }, [id, protocol, host]);
 
     const { pasillo } = data;
     if (!pasillo) return <h2>Cargando</h2>;

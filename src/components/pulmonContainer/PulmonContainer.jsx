@@ -8,11 +8,13 @@ export const getData = (url) => fetch(url);
 const PulmonContainer = () => {
     const [data, setData] = useState([]);
 
+    const { protocol, host } = window.location;
+
     useEffect(() => {
-        getData(`https://${window.location.host}/data.json`)
+        getData(`${protocol}//${host}/data.json`)
             .then((res) => res.json())
             .then((data) => setData(data));
-    }, []);
+    }, [protocol, host]);
 
     return (
         <section className="pulmonContainer">
