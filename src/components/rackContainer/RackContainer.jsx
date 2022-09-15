@@ -6,9 +6,8 @@ import ButtonBack from "../buttonBack/ButtonBack";
 
 const RackContainer = () => {
     const [data, setData] = useState([]);
-    const [route, setRoute] = useState(0);
 
-    const { id } = useParams();
+    const { npulmon, npasillo } = useParams();
 
     const { protocol, host } = window.location;
 
@@ -16,27 +15,22 @@ const RackContainer = () => {
         getData(`${protocol}//${host}/data.json`)
             .then((res) => res.json())
             .then((data) => {
-                let idRoute = data.find((item) =>
-                    item.pasillo.includes(parseInt(id))
-                );
-
                 let filtro = data.reduce((acc, item) => {
                     acc.push(item.rack);
                     return acc
                         .flat()
-                        .filter((item) => item.pasillo === parseInt(id));
+                        .filter((item) => item.pasillo === parseInt(npasillo));
                 }, []);
 
                 setData(filtro.map((item) => item.racks).flat());
-                setRoute(idRoute.pulmon);
             });
-    }, [host, id, protocol]);
+    }, [npasillo, host, protocol]);
 
     if (!data) return <h2>Cargando...</h2>;
 
     return (
         <section className="rackContainer">
-            <ButtonBack to={`/reposicion/pasillo/${route}`} />
+            <ButtonBack to={`/reposicion/pulmon/${npulmon}`} />
             <h1>Racks</h1>
             <p>
                 <b>

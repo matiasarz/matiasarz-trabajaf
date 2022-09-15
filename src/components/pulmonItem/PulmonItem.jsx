@@ -5,7 +5,7 @@ const PulmonItem = ({ data }) => {
     return (
         <div className="pulmonItem">
             <Link
-                to={`/reposicion/pasillo/${data.id}`}
+                to={`/reposicion/pulmon/${data.id}`}
                 className="pulmonItemLink"
             >
                 <h2>{data.pulmon}</h2>

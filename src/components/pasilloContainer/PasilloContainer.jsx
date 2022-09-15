@@ -7,7 +7,7 @@ import ButtonBack from "../buttonBack/ButtonBack";
 const PasilloContainer = () => {
     const [data, setData] = useState([]);
 
-    const { id } = useParams();
+    const { npulmon } = useParams();
 
     const { protocol, host } = window.location;
 
@@ -15,11 +15,12 @@ const PasilloContainer = () => {
         getData(`${protocol}//${host}/data.json`)
             .then((res) => res.json())
             .then((data) =>
-                setData(data.find((item) => item.id === parseInt(id)))
+                setData(data.find((item) => item.id === parseInt(npulmon)))
             );
-    }, [id, protocol, host]);
+    }, [npulmon, protocol, host]);
 
     const { pasillo } = data;
+
     if (!pasillo) return <h2>Cargando</h2>;
 
     return (
@@ -36,7 +37,7 @@ const PasilloContainer = () => {
                 {pasillo.map((item, index) => (
                     <Link
                         className="pasilloLink"
-                        to={`/reposicion/pasillo/${data.pulmon}/${item}`}
+                        to={`/reposicion/pulmon/${data.pulmon}/pasillo/${item}`}
                         key={index}
                     >
                         <h2>{item}</h2>

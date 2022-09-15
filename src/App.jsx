@@ -5,6 +5,7 @@ import PulmonContainer from "./components/pulmonContainer/PulmonContainer";
 import PasilloContainer from "./components/pasilloContainer/PasilloContainer";
 import RackContainer from "./components/rackContainer/RackContainer";
 import NotFound from "./components/NotFound404/NotFound";
+import Location from "./components/locations/Location";
 
 const App = () => {
     return (
@@ -14,12 +15,16 @@ const App = () => {
                     <Route path="/" element={<Inicio />} />
                     <Route path="/reposicion" element={<PulmonContainer />} />
                     <Route
-                        path="/reposicion/pasillo/:id"
+                        path="/reposicion/pulmon/:npulmon/"
                         element={<PasilloContainer />}
                     />
                     <Route
-                        path="/reposicion/pasillo/:num/:id"
+                        path="/reposicion/pulmon/:npulmon/pasillo/:npasillo"
                         element={<RackContainer />}
+                    />
+                    <Route
+                        path="/reposicion/pulmon/:npulmon/pasillo/:npasillo/rack/:nrack"
+                        element={<Location />}
                     />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
