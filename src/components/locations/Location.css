@@ -1,0 +1,31 @@
+.locationContainer {
+    width: 90%;
+    margin: auto;
+}
+.locationContainer .algoArticle {
+    margin-top: 20px;
+}
+.locationContainer .algo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.locationContainer .title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+.locationContainer .title h4 {
+    color: #020263;
+}
+.locationContainer ul li {
+    list-style: none;
+    background-color: #f09d04;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    margin: 5px;
+    width: fit-content;
+} 
