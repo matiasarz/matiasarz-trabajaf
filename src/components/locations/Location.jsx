@@ -4,10 +4,13 @@ import { useParams } from "react-router-dom";
 import ButtonBack from "../buttonBack/ButtonBack";
 import { getData } from "../pulmonContainer/PulmonContainer";
 import "./Location.css";
+import { FaRegLaughWink } from "react-icons/fa";
+import LinkNavigate from "../linkNavigate/LinkNavigate";
 
 const Location = () => {
     const [location, setLocation] = useState([]);
     const [locationModule, setLocationModule] = useState([]);
+    const [showModal, setShowModal] = useState(false);
 
     const { npulmon, npasillo, nrack } = useParams();
 
@@ -39,6 +42,8 @@ const Location = () => {
             });
     }, [npasillo, nrack, host, protocol]);
 
+    let repeticiones = [1, 2, 3, 4, 5];
+
     return (
         <section className="locationContainer">
             <ButtonBack
@@ -46,10 +51,33 @@ const Location = () => {
             />
             <div className="title">
                 <h1>Cantidad de posiciones: {location.length}</h1>
-                <h4>
+                <h4 onClick={() => setShowModal(true)}>
                     {npulmon} / {npasillo} / {nrack}
                 </h4>
+                {showModal ? (
+                    <h5 onClick={() => setShowModal(false)} className="modal">
+                        Estos números representan:
+                        <div>Pulmón / Pasillo / Rack</div>
+                        Hacer click en cualquier parte del modal para volver
+                        {repeticiones.map((item) => (
+                            <FaRegLaughWink />
+                        ))}
+                    </h5>
+                ) : null}
             </div>
+
+            <LinkNavigate
+                links={[
+                    { link: "/", name: "Inicio" },
+                    { link: "/reposicion", name: "Pulmones" },
+                    { link: `/reposicion/pulmon/${npulmon}`, name: "Pasillo" },
+                    {
+                        link: `/reposicion/pulmon/${npulmon}/pasillo/${npasillo}`,
+                        name: "Rack",
+                    },
+                ]}
+            />
+
             <p>
                 Las posiciones del <b>rack {nrack}</b> están disponibles para
                 reponer las cubetas con medicamentos que correspondan al{" "}

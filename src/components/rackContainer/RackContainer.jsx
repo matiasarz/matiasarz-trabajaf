@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { getData } from "../pulmonContainer/PulmonContainer";
 import RackItem from "../rackItem/RackItem";
 import ButtonBack from "../buttonBack/ButtonBack";
+import LinkNavigate from "../linkNavigate/LinkNavigate";
 
 const RackContainer = () => {
     const [data, setData] = useState([]);
@@ -32,6 +33,13 @@ const RackContainer = () => {
         <section className="rackContainer">
             <ButtonBack to={`/reposicion/pulmon/${npulmon}`} />
             <h1>Racks</h1>
+            <LinkNavigate
+                links={[
+                    { link: "/", name: "Inicio" },
+                    { link: "/reposicion", name: "Pulmones" },
+                    { link: `/reposicion/pulmon/${npulmon}`, name: "Pasillo" },
+                ]}
+            />
             <p>
                 <b>
                     Las cubetas se deberan reponer lo más proximas posible a la

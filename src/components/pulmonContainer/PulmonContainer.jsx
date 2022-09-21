@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ButtonBack from "../buttonBack/ButtonBack";
+import LinkNavigate from "../linkNavigate/LinkNavigate";
 import PulmonItem from "../pulmonItem/PulmonItem";
 import "./PulmonContainer.css";
 
@@ -20,6 +21,7 @@ const PulmonContainer = () => {
         <section className="pulmonContainer">
             <ButtonBack to="/" />
             <h1>Pulmones</h1>
+            <LinkNavigate links={[{ link: "/", name: "Inicio" }]} />
             <p>
                 <b>
                     Es donde llegan las cubetas cuando se envian de el sector

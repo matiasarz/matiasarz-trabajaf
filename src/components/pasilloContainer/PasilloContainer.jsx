@@ -3,6 +3,7 @@ import { getData } from "../pulmonContainer/PulmonContainer";
 import { useState, useEffect } from "react";
 import "./PasilloContainer.css";
 import ButtonBack from "../buttonBack/ButtonBack";
+import LinkNavigate from "../linkNavigate/LinkNavigate";
 
 const PasilloContainer = () => {
     const [data, setData] = useState([]);
@@ -27,6 +28,13 @@ const PasilloContainer = () => {
         <section className="pasilloContainer">
             <ButtonBack to="/reposicion" />
             <h1>Pasillo</h1>
+
+            <LinkNavigate
+                links={[
+                    { link: "/", name: "Inicio" },
+                    { link: "/reposicion", name: "Pulmones" },
+                ]}
+            />
             <p>
                 <b>
                     Una vez realizado el paso anterior llevamos las cubetas al
