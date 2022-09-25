@@ -60,7 +60,7 @@ const Location = () => {
                         <div>Pulmón / Pasillo / Rack</div>
                         Hacer click en cualquier parte del modal para volver
                         {repeticiones.map((item) => (
-                            <FaRegLaughWink />
+                            <FaRegLaughWink key={item} />
                         ))}
                     </h5>
                 ) : null}
@@ -81,7 +81,10 @@ const Location = () => {
             <p>
                 Las posiciones del <b>rack {nrack}</b> están disponibles para
                 reponer las cubetas con medicamentos que correspondan al{" "}
-                <b>módulo {locationModule.flat().join(" y ")} del SDA.</b>
+                <b>
+                    pasillo {npasillo} del módulo{" "}
+                    {locationModule.flat().join(" y ")} del SDA.
+                </b>
             </p>
             <article className="algoArticle">
                 <ul className="algo">

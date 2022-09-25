@@ -11,6 +11,12 @@ body {
 .mainContainer {
     position: relative;
     width: 90%;
-    height: 100vh;
-    margin: auto;
+    margin: 20px auto;
 }
+
+@media only screen and (min-width: 1200px) {
+    .mainContainer {
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+} 
