@@ -79,12 +79,13 @@ const Location = () => {
             />
 
             <p>
-                Las posiciones del <b>rack {nrack}</b> están disponibles para
-                reponer las cubetas con medicamentos que correspondan al{" "}
+                Las posiciones en el{" "}
                 <b>
-                    pasillo {npasillo} del módulo{" "}
-                    {locationModule.flat().join(" y ")} del SDA.
-                </b>
+                    pasillo {npasillo} del rack {nrack}
+                </b>{" "}
+                están disponibles para reponer las cubetas con medicamentos que
+                correspondan al{" "}
+                <b>módulo {locationModule.flat().join(" y ")} del SDA.</b>
             </p>
             <article className="algoArticle">
                 <ul className="algo">
