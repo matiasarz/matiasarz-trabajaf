@@ -8,14 +8,14 @@
 body {
     background-color: #ebebeb;
 }
-.main-container {
+.main-app {
     position: relative;
     width: 90%;
     margin: 20px auto;
 }
 
 @media only screen and (min-width: 1200px) {
-    .main-container {
+    .main-app {
         max-width: 1200px;
         margin: 20px auto;
     }

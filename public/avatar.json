@@ -1,12 +1,12 @@
 [
 	{
-		"title": "Repositor",
+		"title_name": "Repositor",
 		"id": 1,
 		"area": "reposicion",
 		"img_url": "https://cronicasdelaunion.com/wp-content/uploads/2021/04/operario-profesiones-otras-profesiones-11714489-1.jpg.png"
 	},
 	{
-		"title": "SDA",
+		"title_name": "SDA",
 		"id": 2,
 		"area": "sda",
 		"img_url": "https://cardiologiaroca.com/wp-content/uploads/2015/11/sin-foto.png"

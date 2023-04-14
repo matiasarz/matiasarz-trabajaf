@@ -1,22 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Inicio from './routes/Inicio';
+// import Inicio from './routes/Inicio';
 import PulmonContainer from './components/pulmonContainer/PulmonContainer';
 import PasilloContainer from './components/pasilloContainer/PasilloContainer';
 import RackContainer from './components/rackContainer/RackContainer';
 import NotFound from './components/NotFound404/NotFound';
 import Location from './components/locations/Location';
 import './App.css';
+import BienvenidaContainer from './components/bienvenida/BienvenidaContainer';
 
 const App = () => {
 	const getData = (url) => fetch(url);
 
 	return (
-		<main className="main-container">
+		<main className="main-app">
 			<BrowserRouter>
 				<Routes>
 					<Route
 						path="/"
-						element={<Inicio />}
+						element={<BienvenidaContainer />}
 					/>
 					<Route
 						path="/reposicion"

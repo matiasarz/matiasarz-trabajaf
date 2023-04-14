@@ -7,9 +7,7 @@ import ButtonNavigation from '../button_navigation/ButtonNavigation';
 
 const RackContainer = () => {
 	const [data, setData] = useState([]);
-
 	const { param_pulmon, param_pasillo } = useParams();
-
 	const { protocol, host } = window.location;
 
 	useEffect(() => {
