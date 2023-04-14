@@ -1,14 +1,14 @@
-.linkContainer {
+.link-container {
     margin: 15px 5px;
     background-color: #020263;
     padding: 10px;
     font-weight: 600;
     border-radius: 10px;
 }
-.linkContainer .link {
+.link-container .link {
     color: #fff;
     font-weight: 600;
 }
-.linkContainer span {
+.link-container span {
     color: #f09d04;
 }

@@ -1,8 +1,8 @@
-.pasilloContainer h1 {
+.pasillo-container h1 {
     padding: 10px;
     margin-top: 30px;
 }
-.pasilloContainer h2 {
+.pasillo-container h2 {
     height: 100px;
     display: flex;
     justify-content: center;
@@ -10,11 +10,11 @@
     border: 1px solid #999;
     margin: 20px auto;
 }
-.pasilloContainer h2:hover {
+.pasillo-container h2:hover {
     background-color: #020263;
     color: #fff;
     transition: background-color 1s;
 }
-.pasilloContainer .pasilloLink {
+.pasillo-container .pasilloLink {
     color: #000;
 }

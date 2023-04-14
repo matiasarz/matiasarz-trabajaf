@@ -1,41 +1,31 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Avatar.css";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Avatar.css';
 
-const Avatar = ({ data }) => {
-    const { nombre, saludo, sector, imgUrl } = data;
+const Avatar = ({ avatar }) => {
+	const [toggle, setHide] = useState(false);
+	const { title, area, img_url } = avatar;
+	const toggleElement = () => setHide(!toggle);
+	const niIdeaParaQueHiceEsto = toggle ? 'imgEmployee' : 'avatarInfo';
 
-    const [hide, setHide] = useState(false);
-
-    const turnOnElement = () => setHide(true);
-    const turnOffElement = () => setHide(false);
-
-    // const styleShow = {
-    //     visibility: "visible",
-    // };
-    // const styleHide = {
-    //     visibility: "hidden",
-    // };
-
-    return (
-        <Link
-            to={sector}
-            onMouseEnter={turnOnElement}
-            onMouseLeave={turnOffElement}
-        >
-            <div className="avatar">
-                <div className={hide ? "" : "avatarInfo"}>
-                    <h2>{nombre}</h2>
-                    <h4>{saludo}</h4>
-                </div>
-                <img
-                    src={imgUrl}
-                    alt={nombre}
-                    className={hide ? "imgEmployee" : ""}
-                />
-            </div>
-        </Link>
-    );
+	return (
+		<Link
+			to={area}
+			onMouseLeave={toggleElement}
+			onMouseEnter={toggleElement}
+		>
+			<div className="avatar">
+				<div className={niIdeaParaQueHiceEsto}>
+					<h2>{title}</h2>
+				</div>
+				<img
+					src={img_url}
+					alt={title}
+					className={niIdeaParaQueHiceEsto}
+				/>
+			</div>
+		</Link>
+	);
 };
 
 export default Avatar;

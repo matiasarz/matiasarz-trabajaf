@@ -1,19 +1,19 @@
-import "./RackItem.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams } from 'react-router-dom';
+import './RackItem.css';
 
 const RackItem = ({ rack }) => {
-    const { npulmon, npasillo } = useParams();
+	const { param_pulmon, param_pasillo } = useParams();
 
-    if (!rack) return <h2>Cargando...</h2>;
+	if (!rack) return <h2>Cargando...</h2>;
 
-    return (
-        <Link
-            to={`/reposicion/pulmon/${npulmon}/pasillo/${npasillo}/rack/${rack}`}
-            className="rackNumber"
-        >
-            <h2>{rack}</h2>
-        </Link>
-    );
+	return (
+		<Link
+			to={`/reposicion/pulmon/${param_pulmon}/pasillo/${param_pasillo}/rack/${rack}`}
+			className="rackNumber"
+		>
+			<h2>{rack}</h2>
+		</Link>
+	);
 };
 
 export default RackItem;

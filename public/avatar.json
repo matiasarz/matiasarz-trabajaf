@@ -1,16 +1,14 @@
 [
-    {
-        "nombre": "Repositor",
-        "saludo": "hola",
-        "id": 1,
-        "sector": "reposicion",
-        "imgUrl": "https://cronicasdelaunion.com/wp-content/uploads/2021/04/operario-profesiones-otras-profesiones-11714489-1.jpg.png"
-    },
-    {
-        "nombre": "SDA",
-        "saludo": "hola",
-        "id": 2,
-        "sector": "sda",
-        "imgUrl": "https://cardiologiaroca.com/wp-content/uploads/2015/11/sin-foto.png"
-    }
+	{
+		"title": "Repositor",
+		"id": 1,
+		"area": "reposicion",
+		"img_url": "https://cronicasdelaunion.com/wp-content/uploads/2021/04/operario-profesiones-otras-profesiones-11714489-1.jpg.png"
+	},
+	{
+		"title": "SDA",
+		"id": 2,
+		"area": "sda",
+		"img_url": "https://cardiologiaroca.com/wp-content/uploads/2015/11/sin-foto.png"
+	}
 ]

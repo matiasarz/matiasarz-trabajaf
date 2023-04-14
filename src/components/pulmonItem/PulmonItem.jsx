@@ -1,17 +1,16 @@
-import "./PulmonItem.css";
-import { Link } from "react-router-dom";
+import ButtonNavigation from '../button_navigation/ButtonNavigation';
+import './PulmonItem.css';
 
 const PulmonItem = ({ data }) => {
-    return (
-        <div className="pulmonItem">
-            <Link
-                to={`/reposicion/pulmon/${data.id}`}
-                className="pulmonItemLink"
-            >
-                <h2>{data.pulmon}</h2>
-            </Link>
-        </div>
-    );
+	return (
+		<div className="pulmonItem">
+			<ButtonNavigation
+				className="pulmonItemLink"
+				toLink={`/reposicion/pulmon/${data.id}`}
+				title={data.pulmon}
+			/>
+		</div>
+	);
 };
 
 export default PulmonItem;

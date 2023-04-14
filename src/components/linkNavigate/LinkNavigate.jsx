@@ -1,16 +1,20 @@
-import { Link } from "react-router-dom";
-import "./LinkNavigate.css";
+import { Link } from 'react-router-dom';
+import './LinkNavigate.css';
 
 const LinkNavigate = ({ links }) => {
-    return (
-        <div className="linkContainer">
-            {links.map((item) => (
-                <Link to={item.link} key={item.link} className="link">
-                    {item.name} <span>{" > "}</span>
-                </Link>
-            ))}
-        </div>
-    );
+	return (
+		<div className="link-container">
+			{links.map((pathname) => (
+				<Link
+					to={pathname.link}
+					key={pathname.link}
+					className="link"
+				>
+					{pathname.name} <span>{' > '}</span>
+				</Link>
+			))}
+		</div>
+	);
 };
 
 export default LinkNavigate;
